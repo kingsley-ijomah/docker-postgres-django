@@ -13,3 +13,11 @@ run django terminal command example:
 ```sh
 docker compose exec web python manage.py migrate
 ```
+
+### Production
+
+```sh
+$ docker compose -f docker-compose.prod.yml up -d --build
+```
+
+Test app at: [http://localhost:1337](http://localhost:1337). Folders are not mounted, image needs to be rebuilt.
