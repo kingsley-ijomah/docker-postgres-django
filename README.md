@@ -11,15 +11,15 @@ Test app at: [http://localhost:8000](http://localhost:8000). The "app" folder is
 
 run django terminal command example:
 ```sh
-docker compose exec web python manage.py migrate
+$ docker compose exec web python manage.py migrate
 ```
 
 ### Production
 
 ```sh
 $ docker compose -f docker-compose.prod.yml up -d --build
-docker compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput
-docker compose -f docker-compose.prod.yml exec web python manage.py collectstatic --no-input --clear
+$ docker compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput
+$ docker compose -f docker-compose.prod.yml exec web python manage.py collectstatic --no-input --clear
 ```
 
 Test app at: [http://localhost:1337](http://localhost:1337). Folders are not mounted, image needs to be rebuilt.
